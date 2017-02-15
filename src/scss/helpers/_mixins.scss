@@ -1,0 +1,58 @@
+@mixin font($ff, $fz, $fw: normal, $fc) {
+  font-family: $ff;
+  font-size: $fz;
+  font-weight: $fw;
+  color: $fc;
+}
+@mixin flex($jc, $ai) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin form {
+  //doesn't work in opera
+  border: none;
+  outline: none;
+  outline-width: 0;
+}
+@mixin btn($w, $h, $bgc) {
+  width: $w;
+  height: $h;
+  line-height: $h;
+  background-color: $bgc;
+  box-sizing: border-box;
+}
+@mixin abs-ctr {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+@mixin pseudo($content: '', $display: block, $pos: static){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin lg {
+   @media screen and (max-width: $break-lg){
+    @content;
+  }
+}
+@mixin md {
+   @media screen and (max-width: $break-md){
+    @content;
+  }
+}
+@mixin sm {
+   @media screen and (max-width: $break-sm){
+    @content;
+  }
+}
+@mixin xs {
+   @media screen and (max-width: $break-xs){
+    @content;
+  }
+}
