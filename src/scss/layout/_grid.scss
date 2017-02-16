@@ -1,5 +1,4 @@
 //breakpoints
-
 $break-lg: 1260px;
 $break-md: 960px;
 $break-sm: 768px;
@@ -9,36 +8,8 @@ $indent: 15px;
 $indent-lg: 15px;
 $indent-md: 15px;
 $indent-sm: 10px;
-$indent-xs: 10px;
+$indent-xs: 5px;
 
-
-.container{
-    max-width: 1260px;
-    padding-left: $indent;
-    padding-right: $indent;
-    box-sizing: border-box;
-    margin: 0 auto;
-
-    @media screen and(max-width: $break-lg){
-        padding-left: $indent-lg;
-        padding-right: $indent-lg;
-    }
-
-    @media screen and(max-width: $break-md){
-        padding-left: $indent-lg;
-        padding-right: $indent-lg;
-    }
-
-    @media screen and(max-width: $break-sm){
-        padding-left: $indent-sm;
-        padding-right: $indent-sm;
-    }
-
-    @media screen and(max-width: $break-xs){
-        padding-left: $indent-xs;
-        padding-right: $indent-xs;
-    }
-}
 @mixin clearfix(){
     &::after{
         display: block;
@@ -46,6 +17,7 @@ $indent-xs: 10px;
         clear: both;
     }
 }
+
 @mixin container(){
     max-width: 1260px;
     padding-left: $indent;
@@ -147,40 +119,40 @@ $indent-xs: 10px;
     word-wrap: break-word;
 }
 @mixin col-1(){
-    width: #{calc(8.333333333333334% - $indent * 2)};
+    width: #{calc(8.333333333333334% - #{$indent} * 2)};
 }
 @mixin col-2(){
-    width: #{calc(16.666666666666668% - 30px)};
+    width: #{calc(16.666666666666668% - #{$indent} * 2)};
 }
 @mixin col-3(){
-    width: #{calc(25% - 30px)};
+    width: #{calc(25% - #{$indent} * 2)};
 }
 @mixin col-4(){
-    width: #{calc(33.333333333333336% - 30px)};
+    width: #{calc(33.333333333333336% - #{$indent} * 2)};
 }
 @mixin col-5(){
-    width: #{calc(41.66666666666667% - 30px)};
+    width: #{calc(41.66666666666667% - #{$indent} * 2)};
 }
 @mixin col-6(){
-    width: #{calc(50% - 30px)};
+    width: #{calc(50% - #{$indent} * 2)};
 }
 @mixin col-7(){
-    width: #{calc(58.333333333333336% - 30px)};
+    width: #{calc(58.333333333333336% - #{$indent} * 2)};
 }
 @mixin col-8(){
-    width: #{calc(66.66666666666667% - 30px)};
+    width: #{calc(66.66666666666667% - #{$indent} * 2)};
 }
 @mixin col-9(){
-    width: #{calc(75% - 30px)};
+    width: #{calc(75% - #{$indent} * 2)};
 }
 @mixin col-10(){
-    width: #{calc(83.33333333333334% - 30px)};
+    width: #{calc(83.33333333333334% - #{$indent} * 2)};
 }
 @mixin col-11(){
-    width: #{calc(91.66666666666667% - 30px)};
+    width: #{calc(91.66666666666667% - #{$indent} * 2)};
 }
 @mixin col-12(){
-    width: #{calc(100% - 30px)};
+    width: #{calc(100% - #{$indent} * 2)};
 }
 @mixin justify-content($value){
     justify-content: $value;
@@ -223,62 +195,62 @@ $indent-xs: 10px;
 }
 @mixin col-lg-1(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(8.333333333333334% - 30px)};
+        width: #{calc(8.333333333333334% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-2(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(16.666666666666668% - 30px)};
+        width: #{calc(16.666666666666668% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-3(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(25% - 30px)};
+        width: #{calc(25% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-4(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(33.333333333333336% - 30px)};
+        width: #{calc(33.333333333333336% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-5(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(41.66666666666667% - 30px)};
+        width: #{calc(41.66666666666667% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-6(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(50% - 30px)};
+        width: #{calc(50% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-7(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(58.333333333333336% - 30px)};
+        width: #{calc(58.333333333333336% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-8(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(66.66666666666667% - 30px)};
+        width: #{calc(66.66666666666667% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-9(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(75% - 30px)};
+        width: #{calc(75% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-10(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(83.33333333333334% - 30px)};
+        width: #{calc(83.33333333333334% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-11(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(91.66666666666667% - 30px)};
+        width: #{calc(91.66666666666667% - #{$indent-lg} * 2)};
     }
 }
 @mixin col-lg-12(){
     @media screen and(max-width: $break-lg){
-        width: #{calc(100% - 30px)};
+        width: #{calc(100% - #{$indent-lg} * 2)};
     }
 }
 @mixin justify-content-lg($value){
@@ -348,12 +320,12 @@ $indent-xs: 10px;
 }
 @mixin col-md-1(){
     @media screen and(max-width: $break-md){
-        width: #{calc(8.333333333333334% - 30px)};
+        width: #{calc(8.333333333333334% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-2(){
     @media screen and(max-width: $break-md){
-        width: #{calc(16.666666666666668% - 30px)};
+        width: #{calc(16.666666666666668% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-3(){
@@ -363,47 +335,47 @@ $indent-xs: 10px;
 }
 @mixin col-md-4(){
     @media screen and(max-width: $break-md){
-        width: #{calc(33.333333333333336% - 30px)};
+        width: #{calc(33.333333333333336% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-5(){
     @media screen and(max-width: $break-md){
-        width: #{calc(41.66666666666667% - 30px)};
+        width: #{calc(41.66666666666667% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-6(){
     @media screen and(max-width: $break-md){
-        width: #{calc(50% - 30px)};
+        width: #{calc(50% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-7(){
     @media screen and(max-width: $break-md){
-        width: #{calc(58.333333333333336% - 30px)};
+        width: #{calc(58.333333333333336% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-8(){
     @media screen and(max-width: $break-md){
-        width: #{calc(66.66666666666667% - 30px)};
+        width: #{calc(66.66666666666667% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-9(){
     @media screen and(max-width: $break-md){
-        width: #{calc(75% - 30px)};
+        width: #{calc(75% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-10(){
     @media screen and(max-width: $break-md){
-        width: #{calc(83.33333333333334% - 30px)};
+        width: #{calc(83.33333333333334% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-11(){
     @media screen and(max-width: $break-md){
-        width: #{calc(91.66666666666667% - 30px)};
+        width: #{calc(91.66666666666667% - #{$indent-md} * 2)};
     }
 }
 @mixin col-md-12(){
     @media screen and(max-width: $break-md){
-        width: #{calc(100% - 30px)};
+        width: #{calc(100% - #{$indent-md} * 2)};
     }
 }
 @mixin justify-content-md($value){
@@ -473,62 +445,62 @@ $indent-xs: 10px;
 }
 @mixin col-sm-1(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(8.333333333333334% - 20px)};
+        width: #{calc(8.333333333333334% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-2(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(16.666666666666668% - 20px)};
+        width: #{calc(16.666666666666668% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-3(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(25% - 20px)};
+        width: #{calc(25% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-4(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(33.333333333333336% - 20px)};
+        width: #{calc(33.333333333333336% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-5(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(41.66666666666667% - 20px)};
+        width: #{calc(41.66666666666667% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-6(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(50% - 20px)};
+        width: #{calc(50% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-7(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(58.333333333333336% - 20px)};
+        width: #{calc(58.333333333333336% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-8(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(66.66666666666667% - 20px)};
+        width: #{calc(66.66666666666667% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-9(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(75% - 20px)};
+        width: #{calc(75% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-10(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(83.33333333333334% - 20px)};
+        width: #{calc(83.33333333333334% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-11(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(91.66666666666667% - 20px)};
+        width: #{calc(91.66666666666667% - #{$indent-sm} * 2)};
     }
 }
 @mixin col-sm-12(){
     @media screen and(max-width: $break-sm){
-        width: #{calc(100% - 20px)};
+        width: #{calc(100% - #{$indent-sm} * 2)};
     }
 }
 @mixin justify-content-sm($value){
@@ -598,62 +570,62 @@ $indent-xs: 10px;
 }
 @mixin col-xs-1(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(8.333333333333334% - 10px)};
+        width: #{calc(8.333333333333334% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-2(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(16.666666666666668% - 10px)};
+        width: #{calc(16.666666666666668% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-3(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(25% - 10px)};
+        width: #{calc(25% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-4(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(33.333333333333336% - 10px)};
+        width: #{calc(33.333333333333336% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-5(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(41.66666666666667% - 10px)};
+        width: #{calc(41.66666666666667% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-6(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(50% - 10px)};
+        width: #{calc(50% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-7(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(58.333333333333336% - 10px)};
+        width: #{calc(58.333333333333336% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-8(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(66.66666666666667% - 10px)};
+        width: #{calc(66.66666666666667% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-9(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(75% - 10px)};
+        width: #{calc(75% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-10(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(83.33333333333334% - 10px)};
+        width: #{calc(83.33333333333334% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-11(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(91.66666666666667% - 10px)};
+        width: #{calc(91.66666666666667% - #{$indent-xs} * 2)};
     }
 }
 @mixin col-xs-12(){
     @media screen and(max-width: $break-xs){
-        width: #{calc(100% - 10px)};
+        width: #{calc(100% - #{$indent-xs} * 2)};
     }
 }
 @mixin justify-content-xs($value){

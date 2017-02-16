@@ -1,20 +1,20 @@
 //base
-@import "/base/typography";
-@import "../../vendor/reset.scss";
+@import "./base/typography";
+@import "./base/reset";
 
 //helpers
-@import "/helpers/variables";
-@import "/helpers/mixins";
+@import "./helpers/variables";
+@import "./helpers/mixins";
 
 //components
-@import "/components/table";
-@import "/components/buttons";
-@import "/components/forms";
-@import "/components/text";
+@import "./components/table";
+@import "./components/buttons";
+@import "./components/forms";
+@import "./components/text";
 
 //layouts
-@import "/layout/grid";
-@import "/layout/header";
-@import "/layout/sidebar";
-@import "/layout/main";
-@import "/layout/footer";
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/sidebar";
+@import "./layout/main";
+@import "./layout/footer";

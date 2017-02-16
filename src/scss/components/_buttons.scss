@@ -1,7 +1,0 @@
-.btn {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
-  @include form;
-  @include font($font-primary, 12px, $font-color-2, bold);
-}
