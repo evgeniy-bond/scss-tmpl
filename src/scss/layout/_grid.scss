@@ -1,0 +1,723 @@
+//breakpoints
+
+$break-lg: 1260px;
+$break-md: 960px;
+$break-sm: 768px;
+$break-xs: 560px;
+
+$indent: 15px;
+$indent-lg: 15px;
+$indent-md: 15px;
+$indent-sm: 10px;
+$indent-xs: 10px;
+
+
+.container{
+    max-width: 1260px;
+    padding-left: $indent;
+    padding-right: $indent;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    @media screen and(max-width: $break-lg){
+        padding-left: $indent-lg;
+        padding-right: $indent-lg;
+    }
+
+    @media screen and(max-width: $break-md){
+        padding-left: $indent-lg;
+        padding-right: $indent-lg;
+    }
+
+    @media screen and(max-width: $break-sm){
+        padding-left: $indent-sm;
+        padding-right: $indent-sm;
+    }
+
+    @media screen and(max-width: $break-xs){
+        padding-left: $indent-xs;
+        padding-right: $indent-xs;
+    }
+}
+@mixin clearfix(){
+    &::after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+@mixin container(){
+    max-width: 1260px;
+    padding-left: $indent;
+    padding-right: $indent;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    @media screen and(max-width: $break-lg){
+        padding-left: $indent-lg;
+        padding-right: $indent-lg;
+    }
+
+    @media screen and(max-width: $break-md){
+        padding-left: $indent-lg;
+        padding-right: $indent-lg;
+    }
+
+    @media screen and(max-width: $break-sm){
+        padding-left: $indent-sm;
+        padding-right: $indent-sm;
+    }
+
+    @media screen and(max-width: $break-xs){
+        padding-left: $indent-xs;
+        padding-right: $indent-xs;
+    }
+}
+
+@mixin container-fluid(){
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+@mixin row-flex(){
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$indent;
+    margin-right: -$indent;
+
+    @media screen and(max-width: $break-lg){
+        margin-left: -$indent-lg;
+        margin-right: -$indent-lg;
+    }
+
+    @media screen and(max-width: $break-md){
+        margin-left: -$indent-lg;
+        margin-right: -$indent-lg;
+    }
+
+    @media screen and(max-width: $break-sm){
+        margin-left: -$indent-sm;
+        margin-right: -$indent-sm;
+    }
+
+    @media screen and(max-width: $break-xs){
+        margin-left: -$indent-xs;
+        margin-right: -$indent-xs;
+    }
+}
+
+@mixin row-float(){
+    margin-left: -$indent;
+    margin-right: -$indent;
+    @include clearfix();
+
+    @media screen and(max-width: $break-lg){
+        margin-left: -$indent-lg;
+        margin-right: -$indent-lg;
+    }
+
+    @media screen and(max-width: $break-md){
+        margin-left: -$indent-lg;
+        margin-right: -$indent-lg;
+    }
+
+    @media screen and(max-width: $break-sm){
+        margin-left: -$indent-sm;
+        margin-right: -$indent-sm;
+    }
+
+    @media screen and(max-width: $break-xs){
+        margin-left: -$indent-xs;
+        margin-right: -$indent-xs;
+    }
+}
+@mixin col(){
+    box-sizing: border-box;
+    margin-left: $indent;
+    margin-right: $indent;
+    word-wrap: break-word;
+}
+@mixin col-float(){
+    float: left;
+}
+@mixin col-padding(){
+    padding-left: $indent-lg;
+    padding-right: $indent-lg;
+    word-wrap: break-word;
+}
+@mixin col-1(){
+    width: #{calc(8.333333333333334% - $indent * 2)};
+}
+@mixin col-2(){
+    width: #{calc(16.666666666666668% - 30px)};
+}
+@mixin col-3(){
+    width: #{calc(25% - 30px)};
+}
+@mixin col-4(){
+    width: #{calc(33.333333333333336% - 30px)};
+}
+@mixin col-5(){
+    width: #{calc(41.66666666666667% - 30px)};
+}
+@mixin col-6(){
+    width: #{calc(50% - 30px)};
+}
+@mixin col-7(){
+    width: #{calc(58.333333333333336% - 30px)};
+}
+@mixin col-8(){
+    width: #{calc(66.66666666666667% - 30px)};
+}
+@mixin col-9(){
+    width: #{calc(75% - 30px)};
+}
+@mixin col-10(){
+    width: #{calc(83.33333333333334% - 30px)};
+}
+@mixin col-11(){
+    width: #{calc(91.66666666666667% - 30px)};
+}
+@mixin col-12(){
+    width: #{calc(100% - 30px)};
+}
+@mixin justify-content($value){
+    justify-content: $value;
+}
+@mixin align-items($value){
+    align-items: $value;
+}
+@mixin align-content($value){
+    align-content: $value;
+}
+@mixin align-self($value){
+    align-self: $value;
+}
+@mixin order($value){
+    order: $value;
+}
+@mixin flex($value){
+    flex: $value;
+}
+@mixin flex-grow($value){
+    flex-grow: $value;
+}
+@mixin flex-shrink($value){
+    flex-shrink: $value;
+}
+@mixin flex-basis($value){
+    flex-basis: $value;
+}
+@mixin flex-direction($value){
+    flex-direction: $value;
+}
+@mixin flex-wrap($value){
+    flex-wrap: $value;
+}
+@mixin flex-flow($value){
+    flex-flow: $value;
+}
+@mixin float($value){
+    float: $value;
+}
+@mixin col-lg-1(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(8.333333333333334% - 30px)};
+    }
+}
+@mixin col-lg-2(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(16.666666666666668% - 30px)};
+    }
+}
+@mixin col-lg-3(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(25% - 30px)};
+    }
+}
+@mixin col-lg-4(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(33.333333333333336% - 30px)};
+    }
+}
+@mixin col-lg-5(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(41.66666666666667% - 30px)};
+    }
+}
+@mixin col-lg-6(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(50% - 30px)};
+    }
+}
+@mixin col-lg-7(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(58.333333333333336% - 30px)};
+    }
+}
+@mixin col-lg-8(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(66.66666666666667% - 30px)};
+    }
+}
+@mixin col-lg-9(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(75% - 30px)};
+    }
+}
+@mixin col-lg-10(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(83.33333333333334% - 30px)};
+    }
+}
+@mixin col-lg-11(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(91.66666666666667% - 30px)};
+    }
+}
+@mixin col-lg-12(){
+    @media screen and(max-width: $break-lg){
+        width: #{calc(100% - 30px)};
+    }
+}
+@mixin justify-content-lg($value){
+    @media screen and(max-width: $break-lg){
+        justify-content: $value;
+    }
+}
+@mixin align-items-lg($value){
+    @media screen and(max-width: $break-lg){
+        align-items: $value;
+    }
+}
+@mixin align-content-lg($value){
+    @media screen and(max-width: $break-lg){
+        align-content: $value;
+    }
+}
+@mixin align-self-lg($value){
+    @media screen and(max-width: $break-lg){
+        align-self: $value;
+    }
+}
+@mixin order-lg($value){
+    @media screen and(max-width: $break-lg){
+        order: $value;
+    }
+}
+@mixin flex-lg($value){
+    @media screen and(max-width: $break-lg){
+        flex: $value;
+    }
+}
+@mixin flex-grow-lg($value){
+    @media screen and(max-width: $break-lg){
+        flex-grow: $value;
+    }
+}
+@mixin flex-shrink-lg($value){
+    @media screen and(max-width: $break-lg){
+        flex-shrink: $value;
+    }
+}
+@mixin flex-basis-lg($value){
+    @media screen and(max-width: $break-lg){
+        flex-basis: $value;
+    }
+}
+@mixin flex-direction-lg($value){
+    @media screen and(max-width: $break-lg){
+        flex-direction: $value;
+    }
+}
+@mixin flex-wrap-lg($value){
+    @media screen and(max-width: $break-lg){
+        flex-wrap: $value;
+    }
+}
+@mixin flex-flow-lg($value){
+    @media screen and(max-width: $break-lg){
+        flex-flow: $value;
+    }
+}
+@mixin float-lg($value){
+    @media screen and(max-width: $break-lg){
+        float: $value;
+    }
+}
+@mixin col-md-1(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(8.333333333333334% - 30px)};
+    }
+}
+@mixin col-md-2(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(16.666666666666668% - 30px)};
+    }
+}
+@mixin col-md-3(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(25% - 30px)};
+    }
+}
+@mixin col-md-4(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(33.333333333333336% - 30px)};
+    }
+}
+@mixin col-md-5(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(41.66666666666667% - 30px)};
+    }
+}
+@mixin col-md-6(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(50% - 30px)};
+    }
+}
+@mixin col-md-7(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(58.333333333333336% - 30px)};
+    }
+}
+@mixin col-md-8(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(66.66666666666667% - 30px)};
+    }
+}
+@mixin col-md-9(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(75% - 30px)};
+    }
+}
+@mixin col-md-10(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(83.33333333333334% - 30px)};
+    }
+}
+@mixin col-md-11(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(91.66666666666667% - 30px)};
+    }
+}
+@mixin col-md-12(){
+    @media screen and(max-width: $break-md){
+        width: #{calc(100% - 30px)};
+    }
+}
+@mixin justify-content-md($value){
+    @media screen and(max-width: $break-md){
+        justify-content: $value;
+    }
+}
+@mixin align-items-md($value){
+    @media screen and(max-width: $break-md){
+        align-items: $value;
+    }
+}
+@mixin align-content-md($value){
+    @media screen and(max-width: $break-md){
+        align-content: $value;
+    }
+}
+@mixin align-self-md($value){
+    @media screen and(max-width: $break-md){
+        align-self: $value;
+    }
+}
+@mixin order-md($value){
+    @media screen and(max-width: $break-md){
+        order: $value;
+    }
+}
+@mixin flex-md($value){
+    @media screen and(max-width: $break-md){
+        flex: $value;
+    }
+}
+@mixin flex-grow-md($value){
+    @media screen and(max-width: $break-md){
+        flex-grow: $value;
+    }
+}
+@mixin flex-shrink-md($value){
+    @media screen and(max-width: $break-md){
+        flex-shrink: $value;
+    }
+}
+@mixin flex-basis-md($value){
+    @media screen and(max-width: $break-md){
+        flex-basis: $value;
+    }
+}
+@mixin flex-direction-md($value){
+    @media screen and(max-width: $break-md){
+        flex-direction: $value;
+    }
+}
+@mixin flex-wrap-md($value){
+    @media screen and(max-width: $break-md){
+        flex-wrap: $value;
+    }
+}
+@mixin flex-flow-md($value){
+    @media screen and(max-width: $break-md){
+        flex-flow: $value;
+    }
+}
+@mixin float-md($value){
+    @media screen and(max-width: $break-md){
+        float: $value;
+    }
+}
+@mixin col-sm-1(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(8.333333333333334% - 20px)};
+    }
+}
+@mixin col-sm-2(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(16.666666666666668% - 20px)};
+    }
+}
+@mixin col-sm-3(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(25% - 20px)};
+    }
+}
+@mixin col-sm-4(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(33.333333333333336% - 20px)};
+    }
+}
+@mixin col-sm-5(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(41.66666666666667% - 20px)};
+    }
+}
+@mixin col-sm-6(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(50% - 20px)};
+    }
+}
+@mixin col-sm-7(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(58.333333333333336% - 20px)};
+    }
+}
+@mixin col-sm-8(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(66.66666666666667% - 20px)};
+    }
+}
+@mixin col-sm-9(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(75% - 20px)};
+    }
+}
+@mixin col-sm-10(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(83.33333333333334% - 20px)};
+    }
+}
+@mixin col-sm-11(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(91.66666666666667% - 20px)};
+    }
+}
+@mixin col-sm-12(){
+    @media screen and(max-width: $break-sm){
+        width: #{calc(100% - 20px)};
+    }
+}
+@mixin justify-content-sm($value){
+    @media screen and(max-width: $break-sm){
+        justify-content: $value;
+    }
+}
+@mixin align-items-sm($value){
+    @media screen and(max-width: $break-sm){
+        align-items: $value;
+    }
+}
+@mixin align-content-sm($value){
+    @media screen and(max-width: $break-sm){
+        align-content: $value;
+    }
+}
+@mixin align-self-sm($value){
+    @media screen and(max-width: $break-sm){
+        align-self: $value;
+    }
+}
+@mixin order-sm($value){
+    @media screen and(max-width: $break-sm){
+        order: $value;
+    }
+}
+@mixin flex-sm($value){
+    @media screen and(max-width: $break-sm){
+        flex: $value;
+    }
+}
+@mixin flex-grow-sm($value){
+    @media screen and(max-width: $break-sm){
+        flex-grow: $value;
+    }
+}
+@mixin flex-shrink-sm($value){
+    @media screen and(max-width: $break-sm){
+        flex-shrink: $value;
+    }
+}
+@mixin flex-basis-sm($value){
+    @media screen and(max-width: $break-sm){
+        flex-basis: $value;
+    }
+}
+@mixin flex-direction-sm($value){
+    @media screen and(max-width: $break-sm){
+        flex-direction: $value;
+    }
+}
+@mixin flex-wrap-sm($value){
+    @media screen and(max-width: $break-sm){
+        flex-wrap: $value;
+    }
+}
+@mixin flex-flow-sm($value){
+    @media screen and(max-width: $break-sm){
+        flex-flow: $value;
+    }
+}
+@mixin float-sm($value){
+    @media screen and(max-width: $break-sm){
+        float: $value;
+    }
+}
+@mixin col-xs-1(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(8.333333333333334% - 10px)};
+    }
+}
+@mixin col-xs-2(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(16.666666666666668% - 10px)};
+    }
+}
+@mixin col-xs-3(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(25% - 10px)};
+    }
+}
+@mixin col-xs-4(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(33.333333333333336% - 10px)};
+    }
+}
+@mixin col-xs-5(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(41.66666666666667% - 10px)};
+    }
+}
+@mixin col-xs-6(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(50% - 10px)};
+    }
+}
+@mixin col-xs-7(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(58.333333333333336% - 10px)};
+    }
+}
+@mixin col-xs-8(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(66.66666666666667% - 10px)};
+    }
+}
+@mixin col-xs-9(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(75% - 10px)};
+    }
+}
+@mixin col-xs-10(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(83.33333333333334% - 10px)};
+    }
+}
+@mixin col-xs-11(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(91.66666666666667% - 10px)};
+    }
+}
+@mixin col-xs-12(){
+    @media screen and(max-width: $break-xs){
+        width: #{calc(100% - 10px)};
+    }
+}
+@mixin justify-content-xs($value){
+    @media screen and(max-width: $break-xs){
+        justify-content: $value;
+    }
+}
+@mixin align-items-xs($value){
+    @media screen and(max-width: $break-xs){
+        align-items: $value;
+    }
+}
+@mixin align-content-xs($value){
+    @media screen and(max-width: $break-xs){
+        align-content: $value;
+    }
+}
+@mixin align-self-xs($value){
+    @media screen and(max-width: $break-xs){
+        align-self: $value;
+    }
+}
+@mixin order-xs($value){
+    @media screen and(max-width: $break-xs){
+        order: $value;
+    }
+}
+@mixin flex-xs($value){
+    @media screen and(max-width: $break-xs){
+        flex: $value;
+    }
+}
+@mixin flex-grow-xs($value){
+    @media screen and(max-width: $break-xs){
+        flex-grow: $value;
+    }
+}
+@mixin flex-shrink-xs($value){
+    @media screen and(max-width: $break-xs){
+        flex-shrink: $value;
+    }
+}
+@mixin flex-basis-xs($value){
+    @media screen and(max-width: $break-xs){
+        flex-basis: $value;
+    }
+}
+@mixin flex-direction-xs($value){
+    @media screen and(max-width: $break-xs){
+        flex-direction: $value;
+    }
+}
+@mixin flex-wrap-xs($value){
+    @media screen and(max-width: $break-xs){
+        flex-wrap: $value;
+    }
+}
+@mixin flex-flow-xs($value){
+    @media screen and(max-width: $break-xs){
+        flex-flow: $value;
+    }
+}
+@mixin float-xs($value){
+    @media screen and(max-width: $break-xs){
+        float: $value;
+    }
+}
