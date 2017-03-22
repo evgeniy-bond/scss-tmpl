@@ -1,10 +1,17 @@
-//main
 var gulp = require('gulp'),
-    notify = require('gulp-notify'),
+    path = require('path'),
     rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
     refresh = require('gulp-livereload'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    autopolyfiller = require('gulp-autopolyfiller'),
+    uglify = require('gulp-uglify'),
+    pump = require('pump');
+
+var jsTask = function () {
+    return gulp.src('/src/js/*.js')
+        .pipe(autopolyfiller())
+        .pipe(connect.reload())
+};
 
 //js
 gulp.task('js', function () {
@@ -27,22 +34,3 @@ gulp.task('min-js', function (cb) {
     cb
   );
 });
-
-//live-reload
-gulp.task('connect', function () {
-    connect.server({
-        root: 'src',
-        livereload: true
-    });
-});
-
-//watch
-gulp.task('watch', function () {
-    gulp.watch('src/index.html', ['html']);
-    gulp.watch('src/scss/*.scss', ['css', 'min-css']);
-    gulp.watch('src/js/*.js', ['js', 'min-js']);
-});
-
-gulp.task('default', ['connect', 'watch']);
-
-gulp.task('dist', ['uncss'])
