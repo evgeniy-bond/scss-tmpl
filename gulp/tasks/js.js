@@ -10,27 +10,13 @@ var gulp = require('gulp'),
 var jsTask = function () {
     return gulp.src('/src/js/*.js')
         .pipe(autopolyfiller())
+        .pipe(concat('index.js'))
+        .pipe(gulp.dest('/src/js/'))
+        .pipe(uglify())
+        .pipe(rename('index.min.js'))
+        .pipe(gulp.dest('/src/js/'))
         .pipe(connect.reload())
 };
 
-//js
-gulp.task('js', function () {
-    return gulp.src('src/js/*.js')
-        .pipe(concat('bundle.js'))
-        .pipe(autopolyfiller('bundle.js'))
-        .pipe(notify("Done!"))
-        .pipe(gulp.dest('src/js/'));
-});
-
-gulp.task('min-js', function (cb) {
-  var options = {
-    preserveComments: 'license'
-  };
-  pump([
-      gulp.src('src/js/*.js'),
-      minifier(options, uglifyjs),
-      gulp.dest('dist')
-    ],
-    cb
-  );
-});
+gulp.task('js', jsTask);
+module.exports = jsTask;
