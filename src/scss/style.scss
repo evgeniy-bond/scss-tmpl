@@ -1,20 +1,26 @@
 //base
-@import "./base/typography";
-@import "./base/reset";
+@import "./base/index.scss";
 
 //helpers
-@import "./helpers/variables";
-@import "./helpers/mixins";
+@import "./helpers/index.scss";
 
 //components
-@import "./components/table";
-@import "./components/buttons";
-@import "./components/forms";
-@import "./components/text";
+@import "./components/index.scss";
 
 //layouts
-@import "./layout/grid";
-@import "./layout/header";
-@import "./layout/sidebar";
-@import "./layout/main";
-@import "./layout/footer";
+@import "./layout/index.scss";
+
+body  {
+    font-size: 100%;
+    //font-magican
+    font-family: 'Open Sans';
+}
+
+h1 {    
+    //px to rem
+    font-size: 16px;
+
+    //assets
+    background: resolve('logo.png');
+    background-size: size('logo.png', 2);
+}

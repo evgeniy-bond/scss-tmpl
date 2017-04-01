@@ -1,15 +1,14 @@
 var gulp = require('gulp'),
-    path = require('path'),
     rename = require('gulp-rename'),
     htmlhint = require("gulp-htmlhint"),
-    refresh = require('gulp-livereload'),
-    connect = require('gulp-connect');
+    plumber = require('gulp-plumber'),
+    path = require('./path');
 
 var htmlTask = function () {
-    return gulp.src('/src/*.html')
+    return gulp.src(path.src.html)
+        .pipe(plumber())
         .pipe(htmlhint())
         .pipe(htmlhint.reporter())
-        .pipe(connect.reload())
 };
 
 gulp.task('html', htmlTask);

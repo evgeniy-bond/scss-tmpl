@@ -1,14 +1,13 @@
 var gulp = require('gulp'),
     imagemin = require('gulp-imagemin');
-    path = require('path'),
     rename = require('gulp-rename'),
-    refresh = require('gulp-livereload'),
-    connect = require('gulp-connect');
+    plumber = require('gulp-plumber');
 
 var imgTask = function () {
-    return gulp.src('/src/img/*')
+    return gulp.src(path.src.img)
+        .pipe(plumber())
         .pipe(imagemin())
-        .pipe(gulp.dest('/dist/img'))
+        .pipe(gulp.dest(path.src.img))
 };
 
 gulp.task('img', imgTask);
