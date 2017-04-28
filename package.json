@@ -33,5 +33,9 @@
     "postcss-font-magician": "^1.6.1",
     "postcss-pxtorem": "^4.0.0",
     "pump": "^1.0.2"
+  },
+  "dependencies": {
+    "gulp-combine-mq": "^0.4.0",
+    "gulp.spritesmith": "^6.4.0"
   }
 }
