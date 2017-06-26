@@ -30,10 +30,39 @@
   position: absolute;
 }
 
-@mixin pseudo($content: '', $display: block, $pos: static){
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin pseudo($content: '', $display: block, $pos: absolute){
   content: $content;
   display: $display;
   position: $pos;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin xl {
+   @media screen and (min-width: $break-xl){
+    @content;
+  }
 }
 
 @mixin lg {
@@ -54,5 +83,23 @@
 @mixin xs {
    @media screen and (max-width: $break-xs){
     @content;
+  }
+}
+
+@mixin fz($f, $md: false, $sm: false, $xs: false) {
+   @if($md){
+    @include md {
+      font-size: $f * .9;
+    }
+  }
+  @if($sm) {
+     @include sm{
+      font-size: $f * .75;
+    }
+  }
+  @if($xs) {
+     @include xs{
+      font-size: $f * .7;
+    }
   }
 }
