@@ -13,7 +13,7 @@ var jsTask = function () {
         .pipe(rename('index.js'))
         .pipe(gulp.dest(path.src.js))
         .pipe(uglify())
-        .pipe(rename('bundle.js'))
+        .pipe(rename('client.js'))
         .pipe(gulp.dest(path.src.js))
 };
 

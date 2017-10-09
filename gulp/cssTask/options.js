@@ -14,7 +14,7 @@ var cssTaskOptions = {
                 }
             }
         }),
-        pxtorem()
+        // pxtorem()
     ],
 
     sassOptions: { outputStyle: 'expanded', indentType: 'tab', indentWidth: '1' },
